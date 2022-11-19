@@ -1,3 +1,5 @@
+import 'package:aladdin_project/alarm/alarm.dart';
+import 'package:aladdin_project/alarm/service_center.dart';
 import 'package:aladdin_project/home/pages/main_page.dart';
 import 'package:aladdin_project/login/pages/login_page.dart';
 import 'package:aladdin_project/recommend_wizard_selected_page/main_page.dart';
@@ -22,6 +24,7 @@ class _AllMainPageState extends State<AllMainPage> {
           MainPage(),
           RecommandPage(),
           LoginPage(),
+          Alarm(),
           //여기 갯수와 버튼의 갯수가 같아야한다.
         ],
       ),
@@ -39,6 +42,7 @@ class _AllMainPageState extends State<AllMainPage> {
           BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
           BottomNavigationBarItem(icon: Icon(Icons.favorite), label: "favorite"),
           BottomNavigationBarItem(icon: Icon(Icons.people_rounded), label: "Login"),
+          BottomNavigationBarItem(icon: Icon(Icons.send), label: "Service"),
         ],
       ),
     );
