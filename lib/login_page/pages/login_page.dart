@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import '../../all_main_page.dart';
+import '../../main_screen.dart';
 import '../components/login_buttons.dart';
 import '../components/pw_field.dart';
 import '../components/text_area.dart';
@@ -30,7 +31,7 @@ class _LoginPageState extends State<LoginPage> {
             Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => AllMainPage(),
+                  builder: (context) => MainScreen(),
                 ));
           },
         ),

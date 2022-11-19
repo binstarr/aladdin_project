@@ -21,6 +21,7 @@ class _HomeBannerState extends State<HomeBanner> {
   Widget build(BuildContext context) {
 
     return Container(
+      width: double.infinity,
       height: 150,
       child: CarouselSlider(
         options: CarouselOptions(
@@ -28,12 +29,9 @@ class _HomeBannerState extends State<HomeBanner> {
         ),
         items: bannerList
             .map((e) => Container(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 10),
-            child: Image.asset
-              (e,
-              fit: BoxFit.fitWidth,
-            ),
+          child: Image.asset
+            (e,
+            fit: BoxFit.fitWidth,
           ),
         ),
         )

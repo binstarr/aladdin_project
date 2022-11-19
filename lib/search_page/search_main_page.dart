@@ -81,6 +81,7 @@ class SearchPage extends StatelessWidget {
           ),
         ],
       ),
+
     );
   }
 
@@ -137,7 +138,7 @@ class SearchPage extends StatelessWidget {
               icon: Icon(Icons.shopping_cart_outlined, color: Colors.grey),
               onPressed: () {
                 // 아이콘 버튼 실행
-                print('Search button is clicked');
+                Navigator.pushNamed(context, "/shoppincart");
               },
               iconSize: 25,
             ),

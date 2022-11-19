@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'all_main_page.dart';
+import 'main_screen.dart';
 
 class LoadingPage extends StatelessWidget {
   const LoadingPage({Key? key}) : super(key: key);
@@ -9,7 +8,7 @@ class LoadingPage extends StatelessWidget {
   Widget build(BuildContext context) {
     Future.delayed(const Duration(seconds: 4), (){
       Navigator.push(context, MaterialPageRoute(builder: (context) {
-        return AllMainPage();
+        return MainScreen();
       }));
 
     });
