@@ -1,9 +1,12 @@
-import 'package:aladdin_project/alarm/alarm.dart';
-import 'package:aladdin_project/alarm/service_center.dart';
-import 'package:aladdin_project/home/pages/main_page.dart';
-import 'package:aladdin_project/login/pages/login_page.dart';
-import 'package:aladdin_project/recommend_wizard_selected_page/main_page.dart';
+
+import 'package:aladdin_project/recommend_page/main_page.dart';
+import 'package:aladdin_project/search_page/search_main_page.dart';
 import 'package:flutter/material.dart';
+
+import 'alarm_page/alarm_page.dart';
+import 'alarm_page/post_page.dart';
+import 'home_page/pages/main_page.dart';
+import 'login_page/pages/login_page.dart';
 
 class AllMainPage extends StatefulWidget {
   const AllMainPage({Key? key}) : super(key: key);
@@ -21,10 +24,11 @@ class _AllMainPageState extends State<AllMainPage> {
       body: IndexedStack(
         index: _selectedIndex,
         children: [
-          MainPage(),
+          HomePageMain(),
           RecommandPage(),
           LoginPage(),
-          Alarm(),
+          AlarmPage(),
+          SearchPage(),
           //여기 갯수와 버튼의 갯수가 같아야한다.
         ],
       ),
@@ -40,9 +44,10 @@ class _AllMainPageState extends State<AllMainPage> {
         },
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-          BottomNavigationBarItem(icon: Icon(Icons.favorite), label: "favorite"),
-          BottomNavigationBarItem(icon: Icon(Icons.people_rounded), label: "Login"),
-          BottomNavigationBarItem(icon: Icon(Icons.send), label: "Service"),
+          BottomNavigationBarItem(icon: Icon(Icons.favorite), label: "recommend"),
+          BottomNavigationBarItem(icon: Icon(Icons.person), label: "My"),
+          BottomNavigationBarItem(icon: Icon(Icons.notifications), label: "Service"),
+          BottomNavigationBarItem(icon: Icon(Icons.search), label: "Search"),
         ],
       ),
     );
