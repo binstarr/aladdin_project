@@ -1,4 +1,3 @@
-import 'package:aladdin_project/recommend_page/main_page.dart';
 import 'package:aladdin_project/shoppincart_page/page/locker_page.dart';
 import 'package:aladdin_project/shoppincart_page/page/purchased_page.dart';
 import 'package:aladdin_project/shoppincart_page/page/shopping_basket_page.dart';

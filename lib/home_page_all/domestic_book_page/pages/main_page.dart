@@ -1,10 +1,9 @@
-import 'package:aladdin_project/recommend_page/components/recoomend_footer.dart';
 import 'package:flutter/material.dart';
-
+import '../../recommend_page/components/recoomend_footer.dart';
 import 'home_page.dart';
 
-class HomePageMain extends StatelessWidget {
-  const HomePageMain({Key? key}) : super(key: key);
+class DomesticBookPage extends StatelessWidget {
+  const DomesticBookPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

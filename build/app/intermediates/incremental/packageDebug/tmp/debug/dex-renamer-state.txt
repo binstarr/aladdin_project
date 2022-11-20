@@ -1,4 +1,4 @@
-#Sat Nov 19 17:47:16 KST 2022
+#Sun Nov 20 17:07:39 KST 2022
 base.0=C\:\\aladdin_project\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 renamed.0=classes.dex
 path.0=classes.dex

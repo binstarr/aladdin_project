@@ -1,7 +1,7 @@
-import 'package:aladdin_project/recommend_page/components/recommend_header.dart';
 import 'package:flutter/material.dart';
 
 import 'components/recommend_footer_list.dart';
+import 'components/recommend_header.dart';
 import 'components/recommend_item.dart';
 import 'components/recoomend_footer.dart';
 
