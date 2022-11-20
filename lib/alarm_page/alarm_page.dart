@@ -1,10 +1,8 @@
 
 import 'package:flutter/material.dart';
 
-import '../recommend_page/components/recoomend_footer.dart';
-import 'components/company_info.dart';
+import '../home_page_all/recommend_page/components/recoomend_footer.dart';
 import 'components/item_list.dart';
-import 'components/service_bar.dart';
 
 class AlarmPage extends StatelessWidget {
   const AlarmPage({Key? key}) : super(key: key);

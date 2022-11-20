@@ -1,4 +1,3 @@
-import 'package:aladdin_project/recommend_page/main_page.dart';
 import 'package:aladdin_project/shoppincart_page/page/locker_page.dart';
 import 'package:aladdin_project/shoppincart_page/page/purchased_page.dart';
 import 'package:aladdin_project/shoppincart_page/page/shopping_basket_page.dart';
@@ -27,11 +26,13 @@ class _ShoppinCartPageState extends State<ShoppinCartPage>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: _buildAppBar(context),
+
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           _buildTabBar(),
           Expanded(child: _buildTabBarView()),
+
         ],
       ),
     );
