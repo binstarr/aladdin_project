@@ -1,3 +1,4 @@
+import 'package:aladdin_project/home_page_all/coffee_page/pages/main_page.dart';
 import 'package:aladdin_project/home_page_all/space_store_page/pages/main_page.dart';
 import 'package:aladdin_project/home_page_all/used_online_page/pages/main_page.dart';
 import 'package:flutter/material.dart';
@@ -23,7 +24,7 @@ class _AllMainPageState extends State<AllMainPage>
   @override
   void initState() {
     super.initState();
-    _tabController = TabController(length: 7, vsync: this);
+    _tabController = TabController(length: 8, vsync: this);
   }
 
   @override
@@ -122,6 +123,8 @@ class _AllMainPageState extends State<AllMainPage>
         Tab(child: Text(
             "우주점", style: TextStyle(color: Colors.black, fontSize: 14))),
         Tab(child: Text(
+            "커피", style: TextStyle(color: Colors.black, fontSize: 14))),
+        Tab(child: Text(
             " ＂북플", style: TextStyle(color: Colors.black, fontSize: 14))),
       ],
     );
@@ -139,6 +142,7 @@ class _AllMainPageState extends State<AllMainPage>
           ForeignBookPage(),
           UsedOnlinePage(),
           SpaceStrorePage(),
+          CoffeeMainPage(),
           UrlPage(url: bookplay),
         ],
       ),

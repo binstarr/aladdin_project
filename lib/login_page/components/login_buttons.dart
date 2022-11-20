@@ -2,13 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert' as convert;
 
-<<<<<<< HEAD
-import '../../all_main_page.dart';
-import '../../logined_page/logined.dart';
-=======
-import '../../home_page_all/all_main_page.dart';
->>>>>>> aa4ae41436c8bf024bf71e8980c35f9a4d53b2f6
-import '../../main_screen.dart';
+import '../../login_succece/logined_page/logined.dart';
 import '../model/RequestPost.dart';
 import '../pages/login_page.dart';
 import '../url.dart';

@@ -10,8 +10,8 @@ class SpaceStrorePage extends StatelessWidget {
     return Scaffold(
       body: ListView(
           children: [
-            // HomePage(),
-            // Footer(),
+            SpaceStroreHomePage(),
+            Footer(),
           ],
       ),
     );

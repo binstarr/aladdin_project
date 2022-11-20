@@ -33,20 +33,17 @@ class _ShoppingBasketPageState extends State<ShoppingBasketPage> {
                 children: [
                   ToggleButtons(
                     selectedColor: Colors.white,
-                    fillColor: Colors.pink,
+                    fillColor: Colors.blue,
                     children: [
                       Padding(
                           padding: EdgeInsets.symmetric(horizontal: 16),
                           child: Text('삭제', style: TextStyle(fontSize: 15))),
                       Padding(
                           padding: EdgeInsets.symmetric(horizontal: 16),
-                          child: Text('보관', style: TextStyle(fontSize: 18))),
+                          child: Text('보관', style: TextStyle(fontSize: 15))),
                       Padding(
                           padding: EdgeInsets.symmetric(horizontal: 16),
-                          child: Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 20),
-                            child: Text('주문', style: TextStyle(fontSize: 18)),
-                          )),
+                          child: Text('주문', style: TextStyle(fontSize: 15))),
                     ],
                     isSelected: isSelected,
                     onPressed: toggleSelect,
@@ -69,10 +66,11 @@ class _ShoppingBasketPageState extends State<ShoppingBasketPage> {
                     child: Text("로그인하시면 장바구니에 저장된 상품을 볼 수 있습니다."),
                   ),
                   _buildShoppingCartImage(), // 쇼핑카트 이미지
+                  SizedBox(height: 20),
                   buildLoginButton(), // 로그인 버튼
                   _guide(),
                   _lineBar(),
-                  SizedBox(height: 50,),
+                  SizedBox(height: 50),
                   Footer(),
 
                 ],
@@ -87,7 +85,7 @@ class _ShoppingBasketPageState extends State<ShoppingBasketPage> {
   void toggleSelect(value) {
     if (value == 0) {
       isDelete = true;
-      Colors.pink;
+      Colors.blue;
       isSave = false;
       isOrder = false;
     } else if (value == 1) {
@@ -108,29 +106,51 @@ class _ShoppingBasketPageState extends State<ShoppingBasketPage> {
     return Icon(
       Icons.remove_shopping_cart_sharp,
       size: 100,
-      color: Colors.pink,
+      color: Colors.blue,
     );
   }
 
   Widget buildLoginButton() {
-    return ElevatedButton(
-      onPressed: () {},
-      child: Text("로그인하기"),
-      style: ElevatedButton.styleFrom(minimumSize: Size(150, 40)),
+    return Container(
+      width: 200,
+      height: 35,
+      decoration: BoxDecoration(
+        color: Colors.white,
+        border: Border.all(color: Colors.grey),
+      ),
+      child: TextButton(
+        onPressed: () {
+          Navigator.pushNamed(context, "/login");
+        },
+        child: Text("로그인하기", style: TextStyle(
+          color: Colors.black54,
+        ),),
+      ),
     );
   }
 
   _guide() {
     return Container(
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
+      child: Column(
         children: [
-          TextButton(onPressed: () {}, child: Text("무이자 할부 안내")),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 5),
-            child: Text("|"),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              TextButton(onPressed: () {}, child: Text("무이자 할부 안내", style: TextStyle(
+                color: Colors.black54,
+              ),)),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 5),
+                child: Text("|", style: TextStyle(
+                  color: Colors.black54,
+                ),),
+              ),
+              TextButton(onPressed: () {}, child: Text("장바구니 이용안내", style: TextStyle(
+                color: Colors.black54,
+              ),)),
+            ],
           ),
-          TextButton(onPressed: () {}, child: Text("장바구니 이용안내")),
+          SizedBox(height: 30),
         ],
       ),
     );

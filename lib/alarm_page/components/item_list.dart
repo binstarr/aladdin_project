@@ -35,7 +35,7 @@ class ItemList extends StatelessWidget {
         child: Row(
           children: [
             Text(
-              '사용자 이름',
+              '고객',
               style: TextStyle(color: Colors.blue, fontWeight: FontWeight.bold),
             ),
             Text(
@@ -49,7 +49,9 @@ class ItemList extends StatelessWidget {
               child: Container(
                 height: 30,
                 width: 70,
-                decoration: BoxDecoration(  color: Color.fromRGBO(219, 218, 222, 0.5) ),
+                decoration: BoxDecoration(  color: Color.fromRGBO(219, 218, 222, 0.5),
+                  borderRadius:  BorderRadius.circular(10),
+                ),
                   child: TextButton(onPressed: () {}, child: Text("전체삭제",style: TextStyle(color: Colors.black,fontSize:10)))),
             )
           ],

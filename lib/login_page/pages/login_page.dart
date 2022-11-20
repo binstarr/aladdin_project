@@ -8,9 +8,10 @@ import '../components/text_area.dart';
 import '../components/text_field.dart';
 
 class LoginPage extends StatefulWidget {
-  const LoginPage({Key? key}) : super(key: key);
+  LoginPage({Key? key}) : super(key: key);
   static TextEditingController idController = new TextEditingController();
   static TextEditingController pwController = new TextEditingController();
+  var loginId = idController;
 
   @override
   State<LoginPage> createState() => _LoginPageState();
@@ -45,7 +46,7 @@ class _LoginPageState extends State<LoginPage> {
       ),
       body: ListView(
         children: [
-          SizedBox(height: 150),
+          SizedBox(height: 50),
           IdTextField(
             text: "아이디",
           ),

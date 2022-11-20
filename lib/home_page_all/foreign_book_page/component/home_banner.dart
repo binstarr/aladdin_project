@@ -24,7 +24,7 @@ class _HomeBannerState extends State<HomeBanner> {
 
     return Container(
       width: double.infinity,
-      height: 250,
+      height: 200,
       child: CarouselSlider(
         options: CarouselOptions(
           autoPlay: true,

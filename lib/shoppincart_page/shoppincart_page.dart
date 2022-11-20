@@ -4,6 +4,8 @@ import 'package:aladdin_project/shoppincart_page/page/shopping_basket_page.dart'
 import 'package:aladdin_project/shoppincart_page/page/today_product_page.dart';
 import 'package:flutter/material.dart';
 
+import '../login_page/pages/login_page.dart';
+
 class ShoppinCartPage extends StatefulWidget {
   const ShoppinCartPage({Key? key}) : super(key: key);
 
@@ -126,8 +128,8 @@ class _ShoppinCartPageState extends State<ShoppinCartPage>
         controller: _tabController,
         children: [
           ShoppingBasketPage(),
-          LockerPage(),
-          PurchasedPage(),
+          LoginPage(),
+          LoginPage(),
           TodayProduct(),
         ],
       ),
