@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import 'package:aladdin_project/recommend_page/components/recoomend_footer.dart';
-import 'package:aladdin_project/recommend_page/main_page.dart';
-=======
->>>>>>> b8fe63bea376a8efa9de2f855b881a6075d3d162
 import 'package:aladdin_project/shoppincart_page/page/locker_page.dart';
 import 'package:aladdin_project/shoppincart_page/page/purchased_page.dart';
 import 'package:aladdin_project/shoppincart_page/page/shopping_basket_page.dart';

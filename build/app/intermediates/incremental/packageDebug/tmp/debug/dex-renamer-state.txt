@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-#Sun Nov 20 16:40:03 KST 2022
-=======
-#Sun Nov 20 17:07:39 KST 2022
->>>>>>> b8fe63bea376a8efa9de2f855b881a6075d3d162
+#Sun Nov 20 17:37:00 KST 2022
 base.0=C\:\\aladdin_project\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 renamed.0=classes.dex
 path.0=classes.dex

@@ -1,4 +1,4 @@
-import 'package:aladdin_project/recommend_page/components/recoomend_footer.dart';
+import 'package:aladdin_project/home_page_all/recommend_page/components/recoomend_footer.dart';
 import 'package:flutter/material.dart';
 
 class ShoppingBasketPage extends StatefulWidget {

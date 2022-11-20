@@ -1,22 +1,8 @@
-<<<<<<< HEAD
 com.example.aladdin_project.app-jetified-window-java-1.0.0-beta04-0 C:\Users\jihun\.gradle\caches\transforms-3\006d93cd422dbc43e89591147c2de572\transformed\jetified-window-java-1.0.0-beta04\res
 com.example.aladdin_project.app-core-1.6.0-1 C:\Users\jihun\.gradle\caches\transforms-3\4ca28c4a71705f8a687c69dda140a277\transformed\core-1.6.0\res
-com.example.aladdin_project.app-jetified-annotation-experimental-1.1.0-2 C:\Users\jihun\.gradle\caches\transforms-3\8965c941cf4bee4d72541b965c7c9d39\transformed\jetified-annotation-experimental-1.1.0\res
-com.example.aladdin_project.app-jetified-window-1.0.0-beta04-3 C:\Users\jihun\.gradle\caches\transforms-3\dee59bb480020f42d53c2ea15e4501f7\transformed\jetified-window-1.0.0-beta04\res
-com.example.aladdin_project.app-debug-4 C:\aladdin_project\android\app\src\debug\res
-com.example.aladdin_project.app-main-5 C:\aladdin_project\android\app\src\main\res
-com.example.aladdin_project.app-pngs-6 C:\aladdin_project\build\app\generated\res\pngs\debug
-com.example.aladdin_project.app-resValues-7 C:\aladdin_project\build\app\generated\res\resValues\debug
-com.example.aladdin_project.app-rs-8 C:\aladdin_project\build\app\generated\res\rs\debug
-com.example.aladdin_project.app-mergeDebugResources-9 C:\aladdin_project\build\app\intermediates\incremental\debug\mergeDebugResources\merged.dir
-com.example.aladdin_project.app-mergeDebugResources-10 C:\aladdin_project\build\app\intermediates\incremental\debug\mergeDebugResources\stripped.dir
-com.example.aladdin_project.app-merged_res-11 C:\aladdin_project\build\app\intermediates\merged_res\debug
-=======
-com.example.aladdin_project.app-jetified-window-java-1.0.0-beta04-0 C:\Users\ITPS\.gradle\caches\transforms-3\006d93cd422dbc43e89591147c2de572\transformed\jetified-window-java-1.0.0-beta04\res
-com.example.aladdin_project.app-core-1.6.0-1 C:\Users\ITPS\.gradle\caches\transforms-3\4ca28c4a71705f8a687c69dda140a277\transformed\core-1.6.0\res
-com.example.aladdin_project.app-webkit-1.5.0-2 C:\Users\ITPS\.gradle\caches\transforms-3\7a9e722f9cadd913a07709114ac94695\transformed\webkit-1.5.0\res
-com.example.aladdin_project.app-jetified-annotation-experimental-1.1.0-3 C:\Users\ITPS\.gradle\caches\transforms-3\8965c941cf4bee4d72541b965c7c9d39\transformed\jetified-annotation-experimental-1.1.0\res
-com.example.aladdin_project.app-jetified-window-1.0.0-beta04-4 C:\Users\ITPS\.gradle\caches\transforms-3\dee59bb480020f42d53c2ea15e4501f7\transformed\jetified-window-1.0.0-beta04\res
+com.example.aladdin_project.app-webkit-1.5.0-2 C:\Users\jihun\.gradle\caches\transforms-3\7a9e722f9cadd913a07709114ac94695\transformed\webkit-1.5.0\res
+com.example.aladdin_project.app-jetified-annotation-experimental-1.1.0-3 C:\Users\jihun\.gradle\caches\transforms-3\8965c941cf4bee4d72541b965c7c9d39\transformed\jetified-annotation-experimental-1.1.0\res
+com.example.aladdin_project.app-jetified-window-1.0.0-beta04-4 C:\Users\jihun\.gradle\caches\transforms-3\dee59bb480020f42d53c2ea15e4501f7\transformed\jetified-window-1.0.0-beta04\res
 com.example.aladdin_project.app-debug-5 C:\aladdin_project\android\app\src\debug\res
 com.example.aladdin_project.app-main-6 C:\aladdin_project\android\app\src\main\res
 com.example.aladdin_project.app-pngs-7 C:\aladdin_project\build\app\generated\res\pngs\debug
@@ -26,4 +12,3 @@ com.example.aladdin_project.app-mergeDebugResources-10 C:\aladdin_project\build\
 com.example.aladdin_project.app-mergeDebugResources-11 C:\aladdin_project\build\app\intermediates\incremental\debug\mergeDebugResources\stripped.dir
 com.example.aladdin_project.app-merged_res-12 C:\aladdin_project\build\app\intermediates\merged_res\debug
 com.example.aladdin_project.app-packaged_res-13 C:\aladdin_project\build\webview_flutter_android\intermediates\packaged_res\debug
->>>>>>> b8fe63bea376a8efa9de2f855b881a6075d3d162

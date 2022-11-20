@@ -20,8 +20,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      // home: LoadingPage(),
-      home: ShoppinCartPage(),
+      home: LoadingPage(),
       routes: {
         "/main": (context) => AllMainPage(),
         "/home": (context) => HomePageMain(),
