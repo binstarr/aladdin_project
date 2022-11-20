@@ -1,6 +1,12 @@
-import 'package:aladdin_project/recommend_page/main_page.dart';
+import 'package:aladdin_project/home_page_all/space_store_page/pages/main_page.dart';
+import 'package:aladdin_project/home_page_all/used_online_page/pages/main_page.dart';
 import 'package:flutter/material.dart';
+import 'domestic_book_page/pages/main_page.dart';
+import 'foreign_book_page/pages/main_page.dart';
 import 'home_page/pages/main_page.dart';
+import 'recommend_page/main_page.dart';
+import 'bookplay_url_page/url.dart';
+import 'bookplay_url_page/url_page.dart';
 
 class AllMainPage extends StatefulWidget {
   const AllMainPage({Key? key}) : super(key: key);
@@ -17,7 +23,7 @@ class _AllMainPageState extends State<AllMainPage>
   @override
   void initState() {
     super.initState();
-    _tabController = TabController(length: 13, vsync: this);
+    _tabController = TabController(length: 7, vsync: this);
   }
 
   @override
@@ -112,23 +118,11 @@ class _AllMainPageState extends State<AllMainPage>
         Tab(child: Text(
             "외서", style: TextStyle(color: Colors.black, fontSize: 14))),
         Tab(child: Text(
-            "알라딘굿즈", style: TextStyle(color: Colors.black, fontSize: 14))),
-        Tab(child: Text(
             "중고온라인", style: TextStyle(color: Colors.black, fontSize: 14))),
         Tab(child: Text(
             "우주점", style: TextStyle(color: Colors.black, fontSize: 14))),
         Tab(child: Text(
-            "중고매장", style: TextStyle(color: Colors.black, fontSize: 14))),
-        Tab(child: Text(
-            "커피", style: TextStyle(color: Colors.black, fontSize: 14))),
-        Tab(child: Text(
-            "음반", style: TextStyle(color: Colors.black, fontSize: 14))),
-        Tab(child: Text(
-            "블루레이", style: TextStyle(color: Colors.black, fontSize: 14))),
-        Tab(child: Text(
-            "북플", style: TextStyle(color: Colors.black, fontSize: 14))),
-        Tab(child: Text(
-            "알라디너TV", style: TextStyle(color: Colors.black, fontSize: 14))),
+            " ＂북플", style: TextStyle(color: Colors.black, fontSize: 14))),
       ],
     );
   }
@@ -141,17 +135,11 @@ class _AllMainPageState extends State<AllMainPage>
         children: [
           HomePageMain(),
           RecommandPage(),
-          HomePageMain(),
-          HomePageMain(),
-          HomePageMain(),
-          HomePageMain(),
-          HomePageMain(),
-          HomePageMain(),
-          HomePageMain(),
-          HomePageMain(),
-          HomePageMain(),
-          HomePageMain(),
-          HomePageMain(),
+          DomesticBookPage(),
+          ForeignBookPage(),
+          UsedOnlinePage(),
+          SpaceStrorePage(),
+          UrlPage(url: bookplay),
         ],
       ),
     );
