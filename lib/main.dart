@@ -1,5 +1,14 @@
+import 'package:aladdin_project/main_screen.dart';
+import 'package:aladdin_project/recommend_page/main_page.dart';
+import 'package:aladdin_project/search_page/search_main_page.dart';
+import 'package:aladdin_project/shoppincart_page/shoppincart_page.dart';
 import 'package:flutter/material.dart';
+import 'alarm_page/alarm_page.dart';
+import 'alarm_page/post_page.dart';
 import 'all_main_page.dart';
+import 'home_page/pages/main_page.dart';
+import 'loading_page.dart';
+import 'login_page/pages/login_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,7 +21,18 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: AllMainPage(),
+      // home: LoadingPage(),
+      home: ShoppinCartPage(),
+      routes: {
+        "/main": (context) => AllMainPage(),
+        "/home": (context) => HomePageMain(),
+        "/recommend": (context) => RecommandPage(),
+        "/login": (context) => LoginPage(),
+        "/alarm": (context) => AlarmPage(),
+        "/post": (context) => PostPage(),
+        "/search": (context) => SearchPage(),
+        "/shoppincart" : (context) => ShoppinCartPage(),
+      },
     );
   }
 }
