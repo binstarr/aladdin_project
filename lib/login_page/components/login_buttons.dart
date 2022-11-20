@@ -3,6 +3,7 @@ import 'package:http/http.dart' as http;
 import 'dart:convert' as convert;
 
 import '../../all_main_page.dart';
+import '../../logined_page/logined.dart';
 import '../../main_screen.dart';
 import '../model/RequestPost.dart';
 import '../pages/login_page.dart';
@@ -36,7 +37,7 @@ class Buttons extends StatelessWidget  {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => MainScreen(),
+                      builder: (context) => LoginedPage(),
                     ));
               }else if(a == 0){
                 print("로그인 실패");
