@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 #Mon Nov 21 20:35:11 KST 2022
 base.0=C\:\\workspace\\aladdin_project\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+=======
+#Mon Nov 21 20:17:32 KST 2022
+base.0=C\:\\aladdin_project\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+>>>>>>> a3da1bf4d3cef2c07df3a589707a1631133d918b
 renamed.0=classes.dex
 path.0=classes.dex
