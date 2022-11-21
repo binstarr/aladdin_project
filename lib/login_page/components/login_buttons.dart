@@ -37,7 +37,7 @@ class Buttons extends StatelessWidget  {
                     MaterialPageRoute(
                       builder: (context) => LoginedPage(),
                     ));
-              }else if(a == 0){
+              }else if ( a != 1) {
                 print("로그인 실패");
               }
             },
@@ -72,14 +72,13 @@ class Buttons extends StatelessWidget  {
       var body = convert.jsonDecode(value.body);
       print('value.headers : ${value.headers}');
       var jsonUsername = body["data"]["username"];
-      print('username : ${body["data"]["username"]}');
-      print('password : ${body["data"]["email"]}');
+      var jsonPassword = body["data"]["password"];
       // print('value.headers[code] : ${value.headers['code']}');
       if((jsonUsername == LoginPage.idController.text)){
         print('성공');
         a = 1;
-      }else{
-        print('실패');
+      }else if (jsonUsername != LoginPage.idController.text){
+        print('실패ddddddddddddddddddddddddddddddddddddddd');
         a = 0;
       }
       print(value.headers);

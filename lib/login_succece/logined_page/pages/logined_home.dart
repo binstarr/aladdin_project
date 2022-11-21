@@ -90,10 +90,10 @@ class _AllMainPageState extends State<AllMainPage>
               )
             ]),
             IconButton(
-              icon: Icon(Icons.shopping_cart_outlined, color: Colors.grey),
+              icon: Icon(Icons.tab, color: Colors.grey),
               onPressed: () {
                 // 아이콘 버튼 실행
-                Navigator.pushNamed(context, "/shoppincart");
+                Navigator.pushNamed(context, "/Shopping");
               },
               iconSize: 25,
             ),
