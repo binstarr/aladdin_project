@@ -21,16 +21,8 @@ class Footer extends StatelessWidget {
         child: Column(
           children: [
             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                TextButton(
-                  onPressed: () {},
-                  child: Text(
-                    "로그인",
-                    style: TextStyle(
-                      color: Colors.black,
-                    ),
-                  ),
-                ),
                 TextButton(
                   onPressed: () {},
                   child: Text(

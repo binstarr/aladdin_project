@@ -9,16 +9,6 @@ class LoginedPurchasedPage extends StatefulWidget {
 }
 
 class _ShoppingBasketPageState extends State<LoginedPurchasedPage> {
-  bool isDelete = true;
-  bool isSave = false;
-  bool isOrder = false;
-  late List<bool> isSelected;
-
-  @override
-  void initState() {
-    isSelected = [isDelete, isSave, isOrder];
-    super.initState();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -122,25 +112,6 @@ class _ShoppingBasketPageState extends State<LoginedPurchasedPage> {
     );
   }
 
-  void toggleSelect(value) {
-    if (value == 0) {
-      isDelete = true;
-      Colors.blue;
-      isSave = false;
-      isOrder = false;
-    } else if (value == 1) {
-      isDelete = false;
-      isSave = true;
-      isOrder = false;
-    } else {
-      isDelete = false;
-      isSave = false;
-      isOrder = true;
-    }
-    setState(() {
-      isSelected = [isDelete, isSave, isOrder];
-    });
-  }
 
   _buildShoppingCartImage() {
     return Icon(
