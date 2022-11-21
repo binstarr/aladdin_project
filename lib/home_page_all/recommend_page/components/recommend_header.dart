@@ -10,25 +10,15 @@ class RecommendHeader extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Row(
-            children: [
-              Text(
-                "추천마법사의 선택",
-                style: TextStyle(fontWeight: FontWeight.bold),
-              ),
-              Spacer(),
-              TextButton(
-                onPressed: () {},
-                child: Text("[로그인하기]",
-                    style: TextStyle(
-                      color: Colors.indigo,
-                      fontWeight: FontWeight.bold,
-                    )),
-              ),
-            ],
-          ),
-          Text("로그인하면 독서 취향에 맞는 책을 보여드립니다."),
           SizedBox(height: 10),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 10.0),
+            child: Text(
+              "추천마법사의 선택",
+              style: TextStyle(fontWeight: FontWeight.bold,
+              fontSize: 16),
+            ),
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
