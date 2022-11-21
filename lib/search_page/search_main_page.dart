@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-
 class SearchPage extends StatelessWidget {
   const SearchPage({Key? key}) : super(key: key);
 
@@ -12,76 +11,10 @@ class SearchPage extends StatelessWidget {
       appBar: _buildAppBar(context),
       body: ListView(
         children: [
-          Container(
-            width: double.infinity,
-            child: Column(
-              children: [
-                Container(
-                  width: double.infinity,
-                  height: 50,
-                  color: Colors.white,
-                  child:
-                  Row(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text("최근 검색", style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 18,
-                        ),),
-                      ),
-                      Spacer(),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text("전체 삭제",
-                            style: TextStyle(
-                              fontSize: 16,
-                            )),
-                      )
-                    ],
-                  ),
-
-                ),
-                Container(
-                  width: double.infinity,
-                  height: 50,
-                  color: Colors.white,
-                  child:
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text("최근 검색 내역이 없습니다.", style: TextStyle(
-                      fontSize: 16,
-                    ),),
-                  ),
-
-                ),
-                Container(
-                  width: double.infinity,
-                  height: 1,
-                  color: Colors.black12,
-                ),
-                Container(
-                  width: double.infinity,
-                  height: 5,
-                  color: Colors.white,
-                ),
-              ],
-            ),
-          ),
-          Container(
-            width: double.infinity,
-            child:
-            Padding(
-              padding: const EdgeInsets.only(left: 8.0, top: 20.0),
-              child: Text("최근 본 상품", style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 19,
-              ),),
-            ),
-          ),
+          _buildRecentSearch(),
+          _buldRecentSee(),
         ],
       ),
-
     );
   }
 
@@ -156,6 +89,120 @@ class SearchPage extends StatelessWidget {
               iconSize: 25,
             ),
           ],
+        ),
+      ],
+    );
+  }
+
+  Widget _buildRecentSearch() {
+    return Container(
+      width: double.infinity,
+      child: Column(
+        children: [
+          Container(
+            width: double.infinity,
+            height: 50,
+            color: Colors.white,
+            child: Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    "최근 검색",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18,
+                    ),
+                  ),
+                ),
+                Spacer(),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text("전체 삭제",
+                      style: TextStyle(
+                        fontSize: 16,
+                      )),
+                )
+              ],
+            ),
+          ),
+          Container(
+            width: double.infinity,
+            height: 50,
+            color: Colors.white,
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                "최근 검색 내역이 없습니다.",
+                style: TextStyle(
+                  fontSize: 16,
+                ),
+              ),
+            ),
+          ),
+          Container(
+            width: double.infinity,
+            height: 1,
+            color: Colors.black12,
+          ),
+          Container(
+            width: double.infinity,
+            height: 5,
+            color: Colors.white,
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buldRecentSee() {
+    return Container(
+      width: double.infinity,
+      child: Padding(
+        padding: const EdgeInsets.only(left: 8.0, top: 20.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              "최근 본 상품",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 19,
+              ),
+            ),
+            SizedBox(height: 20),
+            Row(
+              children: [
+                _buildRecentSeeBook("book06"),
+                SizedBox(width: 20),
+                _buildRecentSeeBook("book12"),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildRecentSeeBook(var img) {
+    return Stack(
+      alignment: Alignment.topRight,
+      children: [
+        Container(
+            width: 120,
+            child: Image.asset('assets/$img.jpg')),
+        Container(
+          alignment: AlignmentDirectional.center,
+          width: 30,
+          height: 30,
+          color: Color.fromRGBO(0, 0, 0, 0.5),
+          child: Text(
+            "X",
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 20,
+            ),
+          ),
         ),
       ],
     );

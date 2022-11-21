@@ -5,24 +5,22 @@ import 'package:flutter/material.dart';
 import '../../../home_page_all/recommend_page/components/recoomend_footer.dart';
 
 class MyProfile extends StatelessWidget {
-  const MyProfile({Key? key}) : super(key: key);
-
-
+  MyProfile({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       appBar: _buildAppBar(context),
       body: ListView(
         children: [
           Column(
             children: [
+              SizedBox(height: 10),
               _profileImage(),
               SizedBox(height: 10),
               _aboutProfile(),
               SizedBox(height: 10),
-              _logoutBtn(),
+              _logoutBtn(context),
               SizedBox(height: 20),
             ],
           ),
@@ -158,7 +156,8 @@ class MyProfile extends StatelessWidget {
       ],
     );
   }
-  Widget _logoutBtn(){
+
+  Widget _logoutBtn(BuildContext context){
     return Container(
       width: 300,
       height: 40,
@@ -168,6 +167,7 @@ class MyProfile extends StatelessWidget {
       child: TextButton(
         onPressed: (){
           print("로그아웃로그아웃로그아웃");
+          Navigator.pop(context);
         },
         child: Text(
           "로그아웃",

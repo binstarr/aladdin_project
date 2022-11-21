@@ -1,6 +1,6 @@
 import 'package:aladdin_project/search_page/search_main_page.dart';
 import 'package:aladdin_project/home_page_all/all_main_page.dart';
-import 'package:aladdin_project/shoppincart_page/shoppincart_page.dart';
+import 'package:aladdin_project/shoppingcart_page/shoppincart_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'alarm_page/alarm_page.dart';
@@ -26,7 +26,7 @@ class _MainScreenState extends State<MainScreen> {
           SearchPage(),
           AlarmPage(),
           LoginPage(),
-          ShoppinCartPage(),
+          ShoppingCartPage(),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(

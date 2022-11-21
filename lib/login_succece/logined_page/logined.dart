@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 
 import '../../home_page_all/all_main_page.dart';
 import '../logined_alarm_page/alarm_page.dart';
-import '../logined_shoppincart_page/shoppincart_page.dart';
+import '../logined_shoppingcart_page/shoppingcart_page.dart';
 
 
 class LoginedPage extends StatefulWidget {
@@ -30,7 +30,7 @@ class _LoginedPageState extends State<LoginedPage> {
           SearchPage(),
           LoginedAlarmPage(),
           MyProfile(),
-          LoginedShoppinCartPage(),
+          LoginedShoppingCartPage(),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(

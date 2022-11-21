@@ -143,7 +143,6 @@ class Header extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          TextButton(onPressed: () {}, child: Text("로그인",style: TextStyle(color: Colors.black),),),
           TextButton(onPressed: () {}, child: Text("PC버전",style: TextStyle(color: Colors.black),),),
           TextButton(onPressed: () {}, child: Text("전체메뉴",style: TextStyle(color: Colors.black),),),
           TextButton(onPressed: () {}, child: Text("나의 서재",style: TextStyle(color: Colors.black),),),

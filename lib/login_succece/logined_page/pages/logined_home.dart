@@ -19,7 +19,6 @@ class AllMainPage extends StatefulWidget {
 
 class _AllMainPageState extends State<AllMainPage>
     with SingleTickerProviderStateMixin {
-
   TabController? _tabController;
 
   @override
@@ -91,26 +90,24 @@ class _AllMainPageState extends State<AllMainPage>
               )
             ]),
             IconButton(
-              icon: Icon(Icons.favorite, color: Colors.grey),
-              onPressed: () {
-                showCupertinoDialog(
-                    context: context,
-                    builder: (context) {
-                      return CupertinoAlertDialog(
-                        title: Text("현재 지원하지 않는 기능입니다."),
-                        actions: [
-                          CupertinoDialogAction(
-                            child: Text("확인"),
-                            onPressed: () {
-                              Navigator.pop(context);
-                            },
-                          ),
-                        ],
-                      );
-                    });
-              },
-              iconSize: 25,
-            ),
+                icon: Icon(Icons.favorite, color: Colors.grey),
+                onPressed: () {
+                  showCupertinoDialog(
+                      context: context,
+                      builder: (context) {
+                        return CupertinoAlertDialog(
+                          title: Text("현재 지원하지 않는 기능입니다."),
+                          actions: [
+                            CupertinoDialogAction(
+                              child: Text("확인"),
+                              onPressed: () {
+                                Navigator.pop(context);
+                              },
+                            ),
+                          ],
+                        );
+                      });
+                }),
           ],
         ),
       ],
@@ -124,22 +121,30 @@ class _AllMainPageState extends State<AllMainPage>
       indicatorColor: Colors.blueAccent,
       indicatorWeight: 3,
       tabs: [
-        Tab(child: Text(
-            "HOME", style: TextStyle(color: Colors.black, fontSize: 14))),
-        Tab(child: Text(
-            "추천마법사", style: TextStyle(color: Colors.black, fontSize: 14))),
-        Tab(child: Text(
-            "국내서", style: TextStyle(color: Colors.black, fontSize: 14))),
-        Tab(child: Text(
-            "외서", style: TextStyle(color: Colors.black, fontSize: 14))),
-        Tab(child: Text(
-            "중고온라인", style: TextStyle(color: Colors.black, fontSize: 14))),
-        Tab(child: Text(
-            "우주점", style: TextStyle(color: Colors.black, fontSize: 14))),
-        Tab(child: Text(
-            "커피", style: TextStyle(color: Colors.black, fontSize: 14))),
-        Tab(child: Text(
-            " ＂북플", style: TextStyle(color: Colors.black, fontSize: 14))),
+        Tab(
+            child: Text("HOME",
+                style: TextStyle(color: Colors.black, fontSize: 14))),
+        Tab(
+            child: Text("추천마법사",
+                style: TextStyle(color: Colors.black, fontSize: 14))),
+        Tab(
+            child: Text("국내서",
+                style: TextStyle(color: Colors.black, fontSize: 14))),
+        Tab(
+            child: Text("외서",
+                style: TextStyle(color: Colors.black, fontSize: 14))),
+        Tab(
+            child: Text("중고온라인",
+                style: TextStyle(color: Colors.black, fontSize: 14))),
+        Tab(
+            child: Text("우주점",
+                style: TextStyle(color: Colors.black, fontSize: 14))),
+        Tab(
+            child: Text("커피",
+                style: TextStyle(color: Colors.black, fontSize: 14))),
+        Tab(
+            child: Text(" ＂북플",
+                style: TextStyle(color: Colors.black, fontSize: 14))),
       ],
     );
   }
@@ -163,4 +168,3 @@ class _AllMainPageState extends State<AllMainPage>
     );
   }
 }
-

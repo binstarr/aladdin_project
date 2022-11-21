@@ -1,12 +1,10 @@
 import 'package:aladdin_project/search_page/search_main_page.dart';
-import 'package:aladdin_project/shoppincart_page/page/shopping_basket_page.dart';
-import 'package:aladdin_project/shoppincart_page/shoppincart_page.dart';
+import 'package:aladdin_project/shoppingcart_page/shoppincart_page.dart';
 import 'package:flutter/material.dart';
 import 'alarm_page/alarm_page.dart';
 import 'alarm_page/post_page.dart';
 import 'home_page_all/all_main_page.dart';
 import 'home_page_all/home_page/pages/main_page.dart';
-import 'home_page_all/recommend_page/main_page.dart';
 import 'loading_page.dart';
 import 'login_page/pages/login_page.dart';
 
@@ -29,7 +27,7 @@ class MyApp extends StatelessWidget {
         "/alarm": (context) => AlarmPage(),
         "/post": (context) => PostPage(),
         "/search": (context) => SearchPage(),
-        "/shoppincart" : (context) => ShoppinCartPage(),
+        "/shoppingcart" : (context) => ShoppingCartPage(),
       },
     );
   }

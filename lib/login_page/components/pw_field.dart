@@ -53,16 +53,6 @@ class _pwTextFieldState extends State<pwTextField> {
                 _iconChange(1, iconList[1]),
                 // _iconChange(1, Icons.visibility_off),
               ],
-              // onPressed: () {
-              //   pwTextField.visible == false;
-              //   if (pwTextField.visible == false) {
-              //     Icon(Icons.visibility_off);
-              //     print(pwTextField.visible);
-              //   }
-              //   print(pwTextField.visible);
-              // },
-              //
-              // icon: Icon(Icons.visibility))
             ),
           ),
         ]),
