@@ -1,4 +1,5 @@
 import 'package:aladdin_project/login_page/pages/login_page.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../../../home_page_all/recommend_page/components/recoomend_footer.dart';
@@ -112,10 +113,23 @@ class MyProfile extends StatelessWidget {
               )
             ]),
             IconButton(
-              icon: Icon(Icons.shopping_cart_outlined, color: Colors.grey),
+              icon: Icon(Icons.favorite, color: Colors.grey),
               onPressed: () {
-                // 아이콘 버튼 실행
-                Navigator.pushNamed(context, "/shoppincart");
+                showCupertinoDialog(
+                    context: context,
+                    builder: (context) {
+                      return CupertinoAlertDialog(
+                        title: Text("현재 지원하지 않는 기능입니다."),
+                        actions: [
+                          CupertinoDialogAction(
+                            child: Text("확인"),
+                            onPressed: () {
+                              Navigator.pop(context);
+                            },
+                          ),
+                        ],
+                      );
+                    });
               },
               iconSize: 25,
             ),

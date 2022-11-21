@@ -22,6 +22,7 @@ class _LoginedPageState extends State<LoginedPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       body: IndexedStack(
         index: _selectedIndex,
         children: [

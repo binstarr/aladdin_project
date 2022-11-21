@@ -1,6 +1,7 @@
 import 'package:aladdin_project/home_page_all/coffee_page/pages/main_page.dart';
 import 'package:aladdin_project/home_page_all/space_store_page/pages/main_page.dart';
 import 'package:aladdin_project/home_page_all/used_online_page/pages/main_page.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'domestic_book_page/pages/main_page.dart';
 import 'foreign_book_page/pages/main_page.dart';
@@ -90,10 +91,23 @@ class _AllMainPageState extends State<AllMainPage>
               )
             ]),
             IconButton(
-              icon: Icon(Icons.shopping_cart_outlined, color: Colors.grey),
+              icon: Icon(Icons.favorite, color: Colors.grey),
               onPressed: () {
-                // 아이콘 버튼 실행
-                Navigator.pushNamed(context, "/shoppincart");
+                showCupertinoDialog(
+                    context: context,
+                    builder: (context) {
+                      return CupertinoAlertDialog(
+                        title: Text("현재 지원하지 않는 기능입니다."),
+                        actions: [
+                          CupertinoDialogAction(
+                            child: Text("확인"),
+                            onPressed: () {
+                              Navigator.pop(context);
+                            },
+                          ),
+                        ],
+                      );
+                    });
               },
               iconSize: 25,
             ),
@@ -109,24 +123,28 @@ class _AllMainPageState extends State<AllMainPage>
       controller: _tabController,
       indicatorColor: Colors.blueAccent,
       indicatorWeight: 3,
+      labelColor: Colors.blue,
+      unselectedLabelColor: Colors.black,
       tabs: [
         Tab(child: Text(
-            "HOME", style: TextStyle(color: Colors.black, fontSize: 14))),
+            "HOME", style: TextStyle(fontSize: 14,fontWeight: FontWeight.bold))),
         Tab(child: Text(
-            "추천마법사", style: TextStyle(color: Colors.black, fontSize: 14))),
+            "추천마법사", style: TextStyle(fontSize: 14,fontWeight: FontWeight.bold))),
         Tab(child: Text(
-            "국내서", style: TextStyle(color: Colors.black, fontSize: 14))),
+            "국내서", style: TextStyle(fontSize: 14,fontWeight: FontWeight.bold))),
         Tab(child: Text(
-            "외서", style: TextStyle(color: Colors.black, fontSize: 14))),
+            "외서", style: TextStyle( fontSize: 14,fontWeight: FontWeight.bold))),
         Tab(child: Text(
-            "중고온라인", style: TextStyle(color: Colors.black, fontSize: 14))),
+            "중고온라인", style: TextStyle( fontSize: 14,fontWeight: FontWeight.bold))),
         Tab(child: Text(
-            "우주점", style: TextStyle(color: Colors.black, fontSize: 14))),
+            "우주점", style: TextStyle(fontSize: 14,fontWeight: FontWeight.bold))),
         Tab(child: Text(
-            "커피", style: TextStyle(color: Colors.black, fontSize: 14))),
+            "커피", style: TextStyle( fontSize: 14,fontWeight: FontWeight.bold))),
         Tab(child: Text(
-            " ＂북플", style: TextStyle(color: Colors.black, fontSize: 14))),
+            " ＂북플", style: TextStyle(fontSize: 14,fontWeight: FontWeight.bold))),
       ],
+
+
     );
   }
 

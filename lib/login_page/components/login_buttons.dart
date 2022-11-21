@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert' as convert;
@@ -39,6 +40,21 @@ class Buttons extends StatelessWidget  {
                     ));
               }else if(a == 0){
                 print("로그인 실패");
+                showCupertinoDialog(
+                    context: context,
+                    builder: (context) {
+                      return CupertinoAlertDialog(
+                        title: Text("로그인에 실패하였습니다. \n 아이디와 비밀번호를 다시 확인해주세요"),
+                        actions: [
+                          CupertinoDialogAction(
+                            child: Text("확인"),
+                            onPressed: () {
+                              Navigator.pop(context);
+                            },
+                          ),
+                        ],
+                      );
+                    });
               }
             },
             child:
@@ -82,8 +98,8 @@ class Buttons extends StatelessWidget  {
         print('실패');
         a = 0;
       }
-      print(value.headers);
-      print(value.body);
+      // print(value.headers);
+      // print(value.body);
     });
   }
 }

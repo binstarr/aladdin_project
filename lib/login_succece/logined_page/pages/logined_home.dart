@@ -1,6 +1,7 @@
 import 'package:aladdin_project/home_page_all/coffee_page/pages/main_page.dart';
 import 'package:aladdin_project/home_page_all/space_store_page/pages/main_page.dart';
 import 'package:aladdin_project/home_page_all/used_online_page/pages/main_page.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../../../home_page_all/bookplay_url_page/url.dart';
 import '../../../home_page_all/bookplay_url_page/url_page.dart';
@@ -90,10 +91,23 @@ class _AllMainPageState extends State<AllMainPage>
               )
             ]),
             IconButton(
-              icon: Icon(Icons.shopping_cart_outlined, color: Colors.grey),
+              icon: Icon(Icons.favorite, color: Colors.grey),
               onPressed: () {
-                // 아이콘 버튼 실행
-                Navigator.pushNamed(context, "/shoppincart");
+                showCupertinoDialog(
+                    context: context,
+                    builder: (context) {
+                      return CupertinoAlertDialog(
+                        title: Text("현재 지원하지 않는 기능입니다."),
+                        actions: [
+                          CupertinoDialogAction(
+                            child: Text("확인"),
+                            onPressed: () {
+                              Navigator.pop(context);
+                            },
+                          ),
+                        ],
+                      );
+                    });
               },
               iconSize: 25,
             ),

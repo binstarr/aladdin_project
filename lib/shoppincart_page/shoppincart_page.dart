@@ -2,6 +2,7 @@ import 'package:aladdin_project/shoppincart_page/page/locker_page.dart';
 import 'package:aladdin_project/shoppincart_page/page/purchased_page.dart';
 import 'package:aladdin_project/shoppincart_page/page/shopping_basket_page.dart';
 import 'package:aladdin_project/shoppincart_page/page/today_product_page.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../login_page/pages/login_page.dart';
@@ -90,10 +91,23 @@ class _ShoppinCartPageState extends State<ShoppinCartPage>
               )
             ]),
             IconButton(
-              icon: Icon(Icons.shopping_cart_outlined, color: Colors.grey),
+              icon: Icon(Icons.favorite, color: Colors.grey),
               onPressed: () {
-                // 아이콘 버튼 실행
-                Navigator.pushNamed(context, "/shoppincart");
+                showCupertinoDialog(
+                    context: context,
+                    builder: (context) {
+                      return CupertinoAlertDialog(
+                        title: Text("현재 지원하지 않는 기능입니다."),
+                        actions: [
+                          CupertinoDialogAction(
+                            child: Text("확인"),
+                            onPressed: () {
+                              Navigator.pop(context);
+                            },
+                          ),
+                        ],
+                      );
+                    });
               },
               iconSize: 25,
             ),
@@ -108,15 +122,17 @@ class _ShoppinCartPageState extends State<ShoppinCartPage>
       controller: _tabController,
       indicatorColor: Colors.blueAccent,
       indicatorWeight: 3,
+      labelColor: Colors.blue,
+      unselectedLabelColor: Colors.black,
       tabs: [
         Tab(child: Text(
-            " 장바구니", style: TextStyle(color: Colors.black, fontSize: 12))),
+            " 장바구니", style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold))),
         Tab(child: Text(
-            "보관함", style: TextStyle(color: Colors.black, fontSize: 12))),
+            "보관함", style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold))),
         Tab(child: Text(
-            "구매함", style: TextStyle(color: Colors.black, fontSize: 12))),
+            "구매함", style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold))),
         Tab(child: Text(
-            "오늘 본 상품", style: TextStyle(color: Colors.black, fontSize: 12))),
+            "오늘 본 상품", style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold))),
       ],
     );
   }

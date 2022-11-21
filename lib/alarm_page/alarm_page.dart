@@ -1,4 +1,5 @@
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../home_page_all/recommend_page/components/recoomend_footer.dart';
@@ -20,7 +21,7 @@ class AlarmPage extends StatelessWidget {
     );
   }
 
-  AppBar _buildAppBar (BuildContext context){
+  AppBar _buildAppBar(BuildContext context) {
     return AppBar(
       centerTitle: true,
       backgroundColor: Colors.white,
@@ -43,7 +44,7 @@ class AlarmPage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(20),
                   ),
                   child: TextField(
-                    onTap: (){
+                    onTap: () {
                       Navigator.pushNamed(context, "/search");
                     },
                     decoration: InputDecoration(
@@ -63,20 +64,30 @@ class AlarmPage extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(
-                    left: 200,
-                    top: 5
-                ),
+                padding: const EdgeInsets.only(left: 200, top: 5),
                 child: IconButton(
-                    onPressed: (){},
+                    onPressed: () {},
                     icon: Icon(Icons.search, color: Colors.grey)),
               )
             ]),
             IconButton(
-              icon: Icon(Icons.shopping_cart_outlined, color: Colors.grey),
+              icon: Icon(Icons.favorite, color: Colors.grey),
               onPressed: () {
-                // 아이콘 버튼 실행
-                Navigator.pushNamed(context, "/shoppincart");
+                showCupertinoDialog(
+                    context: context,
+                    builder: (context) {
+                      return CupertinoAlertDialog(
+                        title: Text("현재 지원하지 않는 기능입니다."),
+                        actions: [
+                          CupertinoDialogAction(
+                            child: Text("확인"),
+                            onPressed: () {
+                              Navigator.pop(context);
+                            },
+                          ),
+                        ],
+                      );
+                    });
               },
               iconSize: 25,
             ),

@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 
@@ -20,25 +21,25 @@ class SearchPage extends StatelessWidget {
                   height: 50,
                   color: Colors.white,
                   child:
-                      Row(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Text("최근 검색", style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 18,
-                            ),),
-                          ),
-                          Spacer(),
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Text("전체 삭제",
-                                style: TextStyle(
-                                  fontSize: 16,
-                                )),
-                          )
-                        ],
+                  Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text("최근 검색", style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18,
+                        ),),
                       ),
+                      Spacer(),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text("전체 삭제",
+                            style: TextStyle(
+                              fontSize: 16,
+                            )),
+                      )
+                    ],
+                  ),
 
                 ),
                 Container(
@@ -84,7 +85,7 @@ class SearchPage extends StatelessWidget {
     );
   }
 
-  AppBar _buildAppBar (BuildContext context){
+  AppBar _buildAppBar(BuildContext context) {
     return AppBar(
       centerTitle: true,
       backgroundColor: Colors.white,
@@ -107,6 +108,9 @@ class SearchPage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(20),
                   ),
                   child: TextField(
+                    onTap: () {
+                      Navigator.pushNamed(context, "/search");
+                    },
                     decoration: InputDecoration(
                       filled: true,
                       fillColor: Color.fromRGBO(232, 232, 232, 1.0),
@@ -124,20 +128,30 @@ class SearchPage extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(
-                    left: 200,
-                    top: 5
-                ),
+                padding: const EdgeInsets.only(left: 200, top: 5),
                 child: IconButton(
-                    onPressed: (){},
+                    onPressed: () {},
                     icon: Icon(Icons.search, color: Colors.grey)),
               )
             ]),
             IconButton(
-              icon: Icon(Icons.shopping_cart_outlined, color: Colors.grey),
+              icon: Icon(Icons.favorite, color: Colors.grey),
               onPressed: () {
-                // 아이콘 버튼 실행
-                Navigator.pushNamed(context, "/shoppincart");
+                showCupertinoDialog(
+                    context: context,
+                    builder: (context) {
+                      return CupertinoAlertDialog(
+                        title: Text("현재 지원하지 않는 기능입니다."),
+                        actions: [
+                          CupertinoDialogAction(
+                            child: Text("확인"),
+                            onPressed: () {
+                              Navigator.pop(context);
+                            },
+                          ),
+                        ],
+                      );
+                    });
               },
               iconSize: 25,
             ),
