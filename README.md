@@ -12,8 +12,9 @@
 - 로그인 & 로그아웃 기능을 추가하였습니다. 
 - 모바일 UI와 어울리는 하단 네비게이션을  구성으로 각 페이지를 채웠습니다.
 
-![무제-2-01](https://user-images.githubusercontent.com/113653130/213922974-e2761f3f-cde8-4d21-b526-5fa432255be9.png)
+
 ![무제-2-02](https://user-images.githubusercontent.com/113653130/213922975-d3d0e0fa-40d0-4b0b-86f5-120643dd52f4.png)
+![무제-2-01](https://user-images.githubusercontent.com/113653130/213922974-e2761f3f-cde8-4d21-b526-5fa432255be9.png)
 
 
 
@@ -23,7 +24,28 @@
 ## 📽️ 구현 영상
 <div align=center>
 
+### ✨ Home & 추천마법사, 국내서 & 외서, 중고온라인 & 우주점 
+<table>
+  <tr>
+    <td>
+    <img src="https://user-images.githubusercontent.com/113653130/213923465-d088c74a-05bd-4356-94fe-6fc0d151d96e.gif" height="350px" width="250px">
+    <img src="https://user-images.githubusercontent.com/113653130/213923472-b13f2a24-682e-4990-bdbb-6057d49a0471.gif" height="350px" width="250px">
+    <img src="https://user-images.githubusercontent.com/113653130/213923500-55e840cd-e034-4c84-b53b-013ccbb7531a.gif" height="350px" width="250px">
+   </td>
+  <tr>
+</table>
+
+
+### ✨ 커피 & 북플 , 검색 및 비로그인시 화면 , 로그인시 
+<table>
+  <tr>
+    <td>
+    <img src="https://user-images.githubusercontent.com/113653130/213923563-79b0493f-ef56-4285-aaff-361f8b0d7302.gif" height="350px" width="250px">
+    <img src="https://user-images.githubusercontent.com/113653130/213923573-53a40499-d870-4a19-adf0-38dc9df7fb81.gif" height="350px" width="250px">
+    <img src="https://user-images.githubusercontent.com/113653130/213923579-f562294f-831f-4ba2-83cc-044152b29682.gif" height="350px" width="250px">
+   </td>
+  <tr>
+</table>
+
 
 </div>
-
-
